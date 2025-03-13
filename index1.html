@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BKIT Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /*header*/
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            height:3rem;
+            padding: 15px 10%;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px;
+            align-items: center;
+            color: rgb(16, 15, 15);
+            box-shadow: 0px 0px 3px gray;
+            flex-wrap: wrap;
+        } 
+        h1{
+            padding-left: 30px;
+            font-weight: bold;
+            font-size: 27px;
+        }
+        ul{
+          display: flex;
+          gap: 15px;
+          font-weight:bold;
+          font-size: 30px;
+          cursor:pointer;
+          list-style: none;
+          color:black;
+        }
+        li{
+            font-size: 20px;
+            padding:5px 20px;
+            transition: color 0.3s ease-in-out; 
+          }
+          ul li:hover{
+            transform: scale(1.1);
+          }
+            
+          @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+             ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+  /*aside*/      
+        aside {
+            height: 38rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.5rem;
+            
+            background:linear-gradient(to left, purple,pink);
+            background-color: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        #A {
+            display: flex;
+            align-items: center;
+            gap: 110px;
+            flex-wrap: wrap;
+            justify-content: center;  
+        }
+        /* Text Section */
+        #home-text h2 {
+            color:#1f2937;
+            text-align: left;
+            font-family:'Times New Roman', Times, serif;
+            font-weight: 900;
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+        #home-text p {
+            color:white;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 32px;
+            font-weight: bold;
+            margin-top:0.5rem;
+        }
+        /* Image Section */
+        #home-image img {
+            display: flex;
+            justify-content: center;
+            
+            width: 500px;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 768px) {
+            #A {
+                flex-direction: column;
+                text-align: center;
+                gap: 30px;
+            }
+
+            #home-text h2 {
+                font-size: 32px;
+                text-align: center;
+            }
+
+            #home-text p {
+                font-size: 20px;
+                text-align: center;
+            }
+
+            #home-image img {
+                width: 90%;
+                height: auto;
+            }
+        }
+ /*nav*/       
+        nav{
+            padding:7rem;
+            background-image: url(programming-code-coding-or-hacker-background-vector.jpg);
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+        #B {
+            text-align: center;
+            font-weight: bold;
+            font-size: 38px;
+            color: white;
+            margin-top: 0px;
+        }
+
+        /* Services Section */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 50px 20%;
+            justify-content: center;
+        }
+
+        /* Service Container */
+        .container {
+            height:350px;
+            width:300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .container:hover {
+            transform: translateY(-10px);
+        }
+
+        .container h3 {
+            font-size: 28px;
+            color: black;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .container ol {
+            list-style:none;
+            padding: 0;
+            font-size: 18px;
+            font-weight: 500;
+            font-style: italic;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .container ol li {
+            margin-bottom: 10px;
+            font-size: 16px;
+            display: grid;
+        }
+
+        .container del {
+            color: red;
+        }
+
+        /* Enroll Button */
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .btn:hover {
+            background: darkblue;
+        }
+        @media (max-width: 1024px) {
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                width: 100%;
+            }
+        }
+/*article*/        
+        article {
+            background:linear-gradient(to right, pink,skyblue);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 9rem;
+            max-width: 1800px;
+            margin: 0px;
+        }
+        .about{
+              text-align: center;
+        }
+        .about h5{
+            color: #1f2937;
+            font-size: 45px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .about p{
+            padding:20px;
+            color: black;
+            padding-left: 55px;
+            line-height: 1.6;
+            font-size: 1.5rem;
+            max-width: 90%;
+            text-align: center;
+            margin: 0 auto;
+        }
+               @media (max-width: 768px) {
+                   
+       
+                   article {
+               padding: 1.5rem; 
+        }
+           
+           .about h5 {
+               font-size: 1.5rem;
+        }
+           
+           .about p {
+               font-size: 0.95rem;
+        }
+        }
+ /*footer*/
+        *{
+            padding: 0;
+            margin: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .F{
+           height: 500%;
+           width: 500%;
+           background: #121b25;
+         }
+         section{
+          padding: 90px 13% 70px;
+         }
+         .footer{
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(200px,auto));
+          gap: 3.5rem;
+          background: rgb(0, 0, 30);
+          position: absolute;
+          left: 0;
+          right: 0;
+         }
+         .footer-content h4{
+          color: skyblue;
+          margin-bottom: 1.5rem;
+          font-size: 20px;
+         }
+         .footer-content li{
+          margin-bottom: 16px;
+         }
+         .footer-content li a{
+          display: block;
+          color: white;
+          font-size: 20px;
+          font-weight: 400;
+          transition: all .40s ease;
+         }
+         .footer-content li a:hover{
+          text-decoration: underline;
+         }
+       .fa-instagram{
+        font-size: 30px;
+        color: white;
+       }
+       .fa-facebook{
+        font-size: 30px;
+        color: white;
+       }
+       .fa-linkedin{
+        font-size: 30px;
+        color: white;
+       }
+       .fa-youtube{
+        font-size: 30px;
+        color: white;
+       }
+       .footer-content p{
+        color: white;
+        font-size: 16px;
+        line-height: 30px;
+        margin: 20px 0;
+       }
+    </style>
+</head>
+<body>
+ <!--header-->   
+    <header>
+       <h1>BKIT SOLUTIONS</h1>
+       <div>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+       </div>
+    </header>
+<!--aside-->     
+    <aside>
+        <div id="A">
+            <div id="home-text">
+                <h2>WELCOME TO <br>
+                    BKIT SOLUTIONS
+                </h2>
+                <br>
+                <p>Your one-stop destination for trainings,<br>
+                job opportunities, and academic support.</p>  
+            </div>
+            <div id="home-image">
+                <img src="6318e2916ddc28d60d89d319_Coding Vs. Programming 02.jpg" alt="" >
+            </div>
+        </div>
+    </aside>
+<!--nav-->
+    <nav>
+        <div id="B" style="text-align: center; font-weight: bold; font-size: 38px;">Our Services
+        <section class="services">
+            <div class="container">
+                <h3>Trainings</h3>
+                <ol>
+                    <li>Online/Offline</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li><del>Fees:<i class="fa-solid fa-indian-rupee-sign"></i>25k</del></li>
+                    <li>Fees:15k</li>
+                    <a href="https://wa.me/8121034516" class="btn">Enroll Now</a>
+                </ol>
+            </div>
+            <div class="container">
+                <h3>My Mocks</h3>
+                <ol>
+                    <li>Check your marks</li>
+                    <li>Download report</li>
+                    <li>Get improvement tips</li>
+                    <li>Solve 50+ questions</li>
+                    <li></li>
+                    <br>
+                    <a href="https://wa.me/8121034516" class="btn">Enroll Now</a>
+                </ol>
+            </div>
+            <div class="container">
+                <h3>Trainings</h3>
+                <ol>
+                    <li>Find job opportunities</li>
+                    <li>Apply for jobs</li>
+                    <li>Get career guidance</li>  
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <a href="https://wa.me/8121034516" class="btn">Enroll Now</a>
+                </ol>
+            </div>
+    </section>
+        </div>    
+    </nav>
+<!--article-->    
+        <article>
+            <div class="about">
+                <h5>About Us</h5>
+                <br>
+                <br>
+                <p>Founded in September 2024 by Mr. Baburao, BkitSolutions offers businesses trained <br>
+                    resources at zero cost. We specialize in campus hiring, connecting companies 
+                     with top talent from colleges. We also build custom 
+                     projects for SMEs and provide corporate training programs 
+                     to enhance workforce skills. Our mission is to support
+                      businesses by providing skilled talent, tailored solutions, 
+                      and impactful training—without any cost for the trained 
+                      resources we offer.</p>     
+        </div>
+        </article>
+<!--footer-->
+        <div class="F">
+            <section class="footer">
+                <div class="footer-content">
+                    <h4>ADDRESS</h4>
+                    <br>
+                        <li><a href="#">T-HUB 2nd Floor, Madhapur,</a></li>
+                        <li><a href="#">Hyderabad</a></li>
+                        <li><a href="#">Telangana-500081</a></li>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>&nbsp;81210314516 / 9951677333</a></li>
+                        <li><a href=""><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;founder@bkitsolutions.in</a></li>
+                        <li><i class="fa-brands fa-instagram"></i>&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-facebook"></i>&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-linkedin"></i>&nbsp;&nbsp;&nbsp;<i class="fa-brands fa-youtube"></i></li>
+                  </div>
+               <div class="footer-content">
+                 <h4>COMPANY</h4>
+                 <br>
+                     <li><a href="#">About</a></li>
+                     <li><a href="#">Careers</a></li>
+                     <li><a href="#">News</a></li>
+                     <li><a href="#">Contact Us</a></li>
+               </div>
+               <div class="footer-content">
+                 <h4>PRODUCTS</h4>
+                 <br>
+                     <li><a href="#">Hiring Assessments</a></li>
+                     <li><a href="#">Job Posting</a></li>
+                     <li><a href="#">Campus Hiring</a></li>
+               </div>
+               
+               <div class="footer-content">
+                 <h4>INTERVIEW PREP</h4>
+                 <br>
+                     <li><a href="#">Learing Videos</a></li>
+                     <li><a href="#">Practice Questions</a></li>
+                     <li><a href="#">Study Material</a></li>
+                     <li><a href="#">Skill Tests</a></li>
+               </div>
+               <div class="footer-content">
+                 <h4>LEGAL</h4>
+                 <br>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">Security</a></li>
+                     <li><a href="#">Terms & Conditions</a></li>
+               </div>
+                  <div class="footer-content">
+                  <p>© 2025 BKIT Solutions. All Rights Reserved.</p>
+                  </div>
+              
+             </section>
+            </div>
+</body>
+</html>
